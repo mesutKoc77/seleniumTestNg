@@ -99,9 +99,10 @@ public class C03_SoftAssert {
 
     softAssert.assertAll();
 
-
     // 5- tum sartlari sagliyorsa sifre basari ile kaydedildi yazdirin
-    System.out.println("sifre basari ile kaydedildi");
+
+
+    //1.47
 
 
 
