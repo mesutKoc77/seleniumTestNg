@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="methodcalistirma">
+    <test name="methodCalistirma1">
+        <classes>
+            <class name="tests.day16_pageObjectModel.C02_XmlFiles">
+                <methods>
+                    <exclude name="test01"> </exclude>
+                    <exclude name="test05"> </exclude>
+                </methods>
+            </class>
+            <class name="tests.day16_pageObjectModel.C03_Xmlfiles">
+                <methods>
+                    <include name="test06"> </include>
+                    <include name="test08"> </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

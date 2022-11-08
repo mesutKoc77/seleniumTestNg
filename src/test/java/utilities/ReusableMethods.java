@@ -1,6 +1,6 @@
 package utilities;
 
-public class Reusable {
+public class ReusableMethods {
 
     public static void bekle(int saniye){
         try {

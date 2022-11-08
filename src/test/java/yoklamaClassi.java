@@ -12,7 +12,6 @@ public class yoklamaClassi extends TestBase {
 
     @Test
     public void test01() throws InterruptedException {
-
                 WebDriverManager.chromedriver().setup();
                 WebDriver driver=new ChromeDriver();
                 driver.manage().window().maximize();
@@ -26,7 +25,5 @@ public class yoklamaClassi extends TestBase {
                 Assert.assertTrue(driver.getPageSource().contains(wishToSee));
                 Thread.sleep(2000);
                 driver.close();
-
     }
-
 }

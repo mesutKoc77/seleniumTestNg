@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import utilities.Driver;
-import utilities.Reusable;
+import utilities.ReusableMethods;
 
 public class C02_DriverKullanimi {
 
@@ -50,7 +50,7 @@ public class C02_DriverKullanimi {
 
                 softAssert.assertTrue(actualUrl.contains(arananUrlKelime),"url wisequarter icermiyor");
                 softAssert.assertAll();
-                Reusable.bekle(2);
+                ReusableMethods.bekle(2);
                 Driver.closeDriver();
 
     }

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.AutomationExercisePage;
 import utilities.Driver;
-import utilities.Reusable;
+import utilities.ReusableMethods;
 
 public class C06_AutomationExercise {
     //1. Launch browser
@@ -37,26 +37,26 @@ public void Test01(){
     automationExercisePage.signUpLinki.click();
 
     softAssert.assertTrue(automationExercisePage.loginAccountElementi.isDisplayed());
-    Reusable.bekle(3);
+    ReusableMethods.bekle(3);
 
     automationExercisePage.emailKutusu.sendKeys("mesut@hotmail.com");
     automationExercisePage.passwordKutusu.sendKeys("mesut");
-    Reusable.bekle(3);
+    ReusableMethods.bekle(3);
 
     automationExercisePage.loginButonu.click();
-    Reusable.bekle(3);
+    ReusableMethods.bekle(3);
 
   boolean yaziGorunuyor=automationExercisePage.yaziGorunuyorMu.isDisplayed();
   softAssert.assertTrue(yaziGorunuyor,"login yazisi gorunmuyor");
-  Reusable.bekle(3);
+  ReusableMethods.bekle(3);
   automationExercisePage.hesapSilindi.click();
-  Reusable.bekle(5);
+  ReusableMethods.bekle(5);
   boolean silindiYazisi=automationExercisePage.gorunuyorSilindi.isDisplayed();
-  Reusable.bekle(3);
+  ReusableMethods.bekle(3);
   softAssert.assertTrue(silindiYazisi,"silindiyazisi gorunmuyor");
 
     softAssert.assertAll();
-    Reusable.bekle(5);
+    ReusableMethods.bekle(5);
     Driver.closeDriver();
 
 }

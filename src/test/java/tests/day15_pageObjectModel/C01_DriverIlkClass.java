@@ -7,6 +7,11 @@ import org.testng.annotations.Test;
 import utilities.Driver;
 
 public class C01_DriverIlkClass {
+    /*
+    java non altına pages adında package  oluşturduk ki sureklı webElement oluşturmayalım
+    com.testNg nin altına sonuna .properties yazacak şekilde bir file dosyası attık. url leri ordan alabilmek için.
+
+     */
 
      /*
       POM de 4 farkli dosyadan ihtiyacimiz olan bilgileri aliriz

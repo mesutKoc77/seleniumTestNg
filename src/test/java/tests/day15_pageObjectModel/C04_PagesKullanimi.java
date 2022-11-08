@@ -19,8 +19,9 @@ public class C04_PagesKullanimi {
 
     AmazonPage amazonPage=new AmazonPage();
     SoftAssert softassert=new SoftAssert();
-    @Test
-    public void test01(){
+    @Test(groups = "smoke")
+    public void test01()
+    {
         Driver.getdriver().get("https://www.amazon.com");
         amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
         actual=amazonPage.aramaSonucElementi.getText();
@@ -29,7 +30,7 @@ public class C04_PagesKullanimi {
         softassert.assertAll();
     }
 
-    @Test(dependsOnMethods ="test01")
+    @Test(dependsOnMethods ="test01", groups = "smoke")
     public void test02(){
         amazonPage.aramaKutusu.clear();
         amazonPage.aramaKutusu.sendKeys("Java"+Keys.ENTER);
@@ -37,7 +38,6 @@ public class C04_PagesKullanimi {
         expected="Java";
         softassert.assertTrue(actual.contains(expected)," java yok");
         softassert.assertAll();
-
     }
     @Test(dependsOnMethods = "test01")
     public void test03(){
