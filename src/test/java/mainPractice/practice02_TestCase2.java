@@ -1,4 +1,4 @@
-package practice;
+package mainPractice;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import tests.day13_testNGFramework.C01_TestNGIlktest;
 import utilities.TestBase;
 
 public class practice02_TestCase2 extends TestBase {
