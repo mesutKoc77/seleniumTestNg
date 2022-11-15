@@ -28,7 +28,7 @@ public class TestBase {
 
     @AfterMethod
     public void teardown(){
-        driver.close();
+      driver.close();
     }
 
     public  void  bekle (int bekleneceksure){
