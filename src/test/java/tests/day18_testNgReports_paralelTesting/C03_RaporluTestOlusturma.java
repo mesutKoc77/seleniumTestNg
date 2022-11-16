@@ -9,13 +9,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
-
-
 import java.util.List;
 
 public class C03_RaporluTestOlusturma extends TestBaseRapor {
     AmazonPage amazonPage=new AmazonPage();
-
     @Test
     public void test01(){
 
@@ -44,9 +41,5 @@ public class C03_RaporluTestOlusturma extends TestBaseRapor {
         Assert.assertTrue(optionsString.contains(ConfigReader.getProperty("amazonArananOptions")));
         extentTest.pass("dropdown menude aranan kelime oldugu test edildi");
         Driver.closeDriver();
-
     }
-
-
-
 }

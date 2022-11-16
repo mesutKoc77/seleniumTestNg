@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >      <!-- ilk satira her zmaan bu gelecek -->
+<suite name="paralel class calistirma" parallel="classes" thread-count="2" verbose="2">
+    <!--
+    paralel calıstırma ve cross browser calıstırma birbirinden farklı konulardır.
+    paralel calıstırma: bir xml dosyasında calıstıracagımız test//package  veya methodlarını
+    aynı anda birden fazla browser acarak calıstırmak demektri.
+
+    paylasımın olusturulacak browserlar arasında gorev paylasşımı için
+    package//class veya method secileelir.
+    bu secimi yaparken browser larar esit yuk dusmesi
+    birbirine baglı methodların sorunsuz çalışması gib konular dikkate alınmladır.
+    paralel calıştırma sırasında bagımsız olarak calıstırdıgımızda
+    sorun cıkarmayan testler failed olabilir.
+
+
+    paralel calısştırma sırasıdna failed olan her test methodunun rapor edilmeden once tek basında
+    calıştırılıp kontrol edilmesinde fayda vardır.
+
+    thread count: çalışacak browser sayısı
+
+    verbose: dosya calısştıktan sonra konsolda cıkan yazıların ayrıntıların detay seviyelerini belirtir.
+    1- en az
+    10- en cok olnak uzere
+    istediigmiz degeri yazarız.
+
+     -->
+    <test name="clas test1">
+        <classes>
+            <class name="tests.day14_dependsOnMethods_softAssert.C02_DependsOnMethods"></class>
+            <class name="tests.day15_pageObjectModel.C03_PagesKullanimi"></class>
+            <class name="tests.day15_pageObjectModel.C02_DriverKullanimi"></class>
+            <class name="tests.day14_dependsOnMethods_softAssert.C03_SoftAssert"></class>
+        </classes>
+    </test>
+
+</suite>
