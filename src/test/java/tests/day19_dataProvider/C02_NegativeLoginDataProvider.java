@@ -1,4 +1,4 @@
-package tests.day19_dataProvider_crossBrowserTesting;
+package tests.day19_dataProvider;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -31,7 +31,6 @@ public class C02_NegativeLoginDataProvider {
     giriş yapılamadıgını test edinn
 
      */
-    //38.40
 
     @Test(dataProvider = "mailVeSifrelerinProvideri")
     public void test01(String email, String sifre) {
@@ -45,10 +44,10 @@ public class C02_NegativeLoginDataProvider {
         myCoursedemyPage.emailKutusu.sendKeys(email);
         myCoursedemyPage.passwordKutusu.sendKeys(sifre);
         // Login butonuna basarak login olmaya calisin
-        if (myCoursedemyPage.cookies.isDisplayed()){
+        if (myCoursedemyPage.cookies.isDisplayed()) {
             myCoursedemyPage.cookies.click();
         }
-        ReusableMethods.waitForClickablility(myCoursedemyPage.loginButonu,10);
+        ReusableMethods.waitForClickablility(myCoursedemyPage.loginButonu, 10);
         ReusableMethods.bekle(1);
         myCoursedemyPage.loginButonu.click();
         ReusableMethods.bekle(1);

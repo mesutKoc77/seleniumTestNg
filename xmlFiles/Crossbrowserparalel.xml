@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Paralel Cross Browser Testi" parallel="tests" thread-count="2" verbose="3">
+    <!--
+    **********************************************
+    thread count aynı anda kaç adet çalıştıryaım?
+    parallel de ise hangi bazda çalıştırayım?aşağıda zaten testlere göre ayırdıgım için testler bazında çalış
+    tırdım.
+    verbose ise test bittikten sonra ne kadar ayrıntı istiyorsun ?
+    *********************************************
+
+    cross browser imiz normal testlerimiz üzerinde çalışmaz.
+    Cb için ozel bir driver ve testbase class ı oluşturmamız gerekir.
+
+    tum ayarlamalar yapıldıktan sonra XML üzerinden
+    cross browser uzerinden test yapmak için
+    farklı browser lar uzerinden çalışmasını ıstedigimiz testleri
+    <test> </test> tagı üzerinde topluyoruz.
+    <test> altında package class veya method olarak istedigimiz kadar test ekleyebilitiz.
+
+    <test> olarak ayırdıgımız bolumların istedigimiz browser ile çalışması için
+    parametre olark browser girmeliyiz.
+    -->
+
+    <test name="cross browser calistirma ilk browser">
+        <parameter name="Browser" value="firefox"></parameter>
+        <!--
+        burdaki parametre ismi ile testBaseCross daki parametre ismi aynı olmali
+        -->
+        <classes>
+            <class name="tests.day19_CrossBrowserTests.C01_AmazonSearchTest"></class>
+        </classes>
+    </test>
+
+    <test name="cross browser calistirma ikinci browser">
+        <parameter name="Browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day19_CrossBrowserTests.C02_NegativeLoginTesti"></class>
+        </classes>
+    </test>
+
+</suite>

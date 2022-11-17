@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sirali Cross Browser Testi">
+    <!--
+
+
+    cross browser imiz normal testlerimiz üzerinde çalışmaz.
+    Cb için ozel bir driver ve testbase class ı oluşturmamız gerekir.
+    
+    tum ayarlamalar yapıldıktan sonra XML üzerinden
+    cross browser uzerinden test yapmak için 
+    farklı rowser lar uzerinden çalışmasını ıstedigimiz testleri
+    <test> </test> tagı üzerinde topluyoruz.
+    <test> altında package class veya method olarak istedigimiz kadar test ekleyebilitiz.
+    
+    <test> olarak ayırdıgımız bolumların istedigimiz browser ile çalışması için 
+    parametre olark browser girmeliyiz.
+    
+    
+    -->
+
+    <test name="cross browser calistirma ilk browser">
+        <parameter name="Browser" value="chrome"></parameter>
+        <!--
+        burdaki parametre ismi ile testBaseCross daki parametre ismi aynı olmali
+        -->
+        <classes>
+            <class name="tests.day19_CrossBrowserTests.C01_AmazonSearchTest"></class>
+        </classes>
+    </test>
+
+    <test name="cross browser calistirma ikinci browser">
+        <parameter name="Browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day19_CrossBrowserTests.C02_NegativeLoginTesti"></class>
+        </classes>
+    </test>
+
+</suite>
